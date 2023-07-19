@@ -9,7 +9,7 @@
     <script>
       let second = Number(prompt("Enter second"));
       const showTiming = () => {
-        console.log(second);
+        document.write(second + "<br>");
         second--;
         if (second == 0) {
           clearInterval(myInterval);
@@ -17,7 +17,7 @@
       };
       const myInterval = setInterval(showTiming, 1000);
       setTimeout(() => {
-        console.log("TimeUp");
+       document.write("Time Uppppppp!!!!!!!");
       }, second * 1000);
     </script>
   </body>
