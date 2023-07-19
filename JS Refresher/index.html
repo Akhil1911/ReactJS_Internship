@@ -7,12 +7,18 @@
   </head>
   <body>
     <script>
-      let time = prompt("Enter Time");
-      const timer = () => {
+      let second = Number(prompt("Enter second"));
+      const showTiming = () => {
+        console.log(second);
+        second--;
+        if (second == 0) {
+          clearInterval(myInterval);
+        }
+      };
+      const myInterval = setInterval(showTiming, 1000);
+      setTimeout(() => {
         console.log("TimeUp");
-      }
-    setTimeout(timer,time*1000);
-    
+      }, second * 1000);
     </script>
   </body>
 </html>
