@@ -120,9 +120,9 @@
 // const age = Number(prompt("Enter your age"));
 // alert(age)
 // if (age >= 14 && age <= 90) {
-    //     alert("Good")
-    // }else {alert("Not Good")}
-    
+//     alert("Good")
+// }else {alert("Not Good")}
+
 // task -> Write an if condition to check that age is not between 14 and 90 inclusively.
 // const age = Number(prompt("Enter your age"));
 // if (!age >= 14 && !age <= 90) {
@@ -140,20 +140,19 @@
 
 // task -> Check the login
 
-const isAdmin = prompt("Who's there?");
-if (isAdmin == "Admin") {
-    const password = prompt("Enter Password");
-    if (password == "" || password == null) {
-        alert("Canceled");
-    } else if (password == "TheMaster") {
-        alert("Welcome!")
-    } else {
-        alert("Wrong password");
-    }
-}
- else if (isAdmin == "" || isAdmin == null) {
-   alert("Canceled");
- } else {
-   alert("I don't know you");
- }
-
+// const isAdmin = prompt("Who's there?");
+// if (isAdmin == "Admin") {
+//     const password = prompt("Enter Password");
+//     if (password == "" || password == null) {
+//         alert("Canceled");
+//     } else if (password == "TheMaster") {
+//         alert("Welcome!")
+//     } else {
+//         alert("Wrong password");
+//     }
+// }
+//  else if (isAdmin == "" || isAdmin == null) {
+//    alert("Canceled");
+//  } else {
+//    alert("I don't know you");
+//  }
