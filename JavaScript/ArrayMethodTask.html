@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods Tasks</title>
+  </head>
+  <body>
+    <center>
+      <h1>Array Methods Tasks</h1>
+    </center>
+    <script>
+      let Employees = [
+        {
+          id: 101,
+          name: "Sarthak",
+          age: 19,
+          salary: 50000,
+        },
+        {
+          id: 102,
+          name: "Sakshi",
+          age: 20,
+          salary: 45000,
+        },
+        {
+          id: 202,
+          name: "Kevish",
+          age: 20,
+          salary: 200000,
+        },
+        {
+          id: 104,
+          name: "Nikhil",
+          age: 70,
+          salary: 80000,
+        },
+        {
+          id: 105,
+          name: "John",
+          age: 60,
+          salary: 10,
+        },
+      ];
+
+      //Task 1 => Name starting with S
+      document.write("<h2>Task 1 :- Name starting with S</h2>");
+      let newArr = Employees.filter((item) => item.name.charAt(0) == "S");
+      newArr.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+
+      //Task 2 => Age > 50
+      document.write("<h2>Task 2 :- Employee Age > 50</h2>");
+      let newArr2 = Employees.filter((item) => item.age > 50);
+      newArr2.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+
+      //Task 3 => Find Employee with id 101
+      document.write("<h2>Task 3 :- Find Employee with id 101</h2>");
+      let newArr3 = Employees.find((item) => item.id == 101);
+      if (newArr3.length > 1) {
+        newArr3.map((value) => {
+          document.write("ID : " + value.id);
+          document.write(", Name : " + value.name);
+          document.write(", Age : " + value.age);
+          document.write(", Salary : " + value.salary + "<br>");
+        });
+      } else {
+        document.write("ID : " + newArr3.id + "<br>");
+        document.write(" Name : " + newArr3.name + "<br>");
+        document.write(" Age : " + newArr3.age + "<br>");
+        document.write(" Salary : " + newArr3.salary + "<br>");
+      }
+
+      //Task 4 => Increase all salary to 10000
+      document.write(
+        "<h2>Task 4 :- Increase all Employees salary to 10000</h2>"
+      );
+      for (let val of Employees) {
+        val.salary += 10000;
+      }
+      Employees.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+
+      //Task 5 => Add New Emp At Pos 3
+      document.write("<h2>Task 5 :- Add New Employee At Position 3</h2>");
+      let newEmployee = {
+        id: 106,
+        name: "new employee",
+        age: 100,
+        salary: 1,
+      };
+      Employees.splice(2, 0, newEmployee);
+      Employees.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+
+      //Task 6 => Delete employee at position 2
+      document.write("<h2>Task 6 :- Delete employee at position 2</h2>");
+      Employees.splice(1, 1);
+      Employees.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+
+      //Task 7 ==> Index  of emp with id 202
+      document.write("<h2>Task 7 :- Find Index  of emp with id 202</h2>");
+      let getIndex;
+      let newEmp = Employees.filter((item, index) => {
+        if (item.id == 202) {
+          getIndex = index;
+        }
+      });
+      if (getIndex) {
+        document.write("Index of employee with id 202 is : " + getIndex);
+      } else {
+        document.write("No such employee found with id 202!!!");
+      }
+
+      //Task 8 ==> If someone has salary less than 100
+      document.write(
+        "<h2>Task 8 :- Find All Employess having salary less than 100</h2>"
+      );
+      let newEmp4 = Employees.filter((item) => {
+        return item.salary < 100;
+      });
+      if (newEmp4.length) {
+        for (i = 0; i < newEmp4.length; i++) {
+          document.write("ID : " + newEmp4[i].id);
+          document.write(", Name : " + newEmp4[i].name);
+          document.write(", Age : " + newEmp4[i].age);
+          document.write(", Salary : " + newEmp4[i].salary + "<br>");
+        }
+      } else {
+        console.log("Noone has salary < 100");
+      }
+
+      //Task 9 => New array with additional property uppername having name in uppercase
+       document.write(
+        "<h2>Task 9 :- New array with additional property uppername having name in uppercase</h2>"
+      );
+        let newEmp5 = Employees;
+        newEmp5.map((val) => {
+            return val['upperName'] = val.name.toUpperCase();
+        })
+      newEmp5.map((value) => {
+        document.write("ID : " + value.id);
+        document.write(", Name : " + value.name);
+        document.write(", UpperName : " + value.upperName);
+        document.write(", Age : " + value.age);
+        document.write(", Salary : " + value.salary + "<br>");
+      });
+    </script>
+  </body>
+</html>
