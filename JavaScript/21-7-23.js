@@ -60,7 +60,7 @@
 // let maxValue = 0;
 
 // function getMaxSubSum(arr) {
-    
+
 //   //checking all values less than 0
 //   for (i = 0; i < arr.length; i++) {
 //     if (arr[i] < 0) {
@@ -69,7 +69,7 @@
 //   }
 //   if (negative == arr.length) {
 //     allNegative = true;
-//     alert("Sum is : " + 0);         
+//     alert("Sum is : " + 0);
 //   }
 
 //   //getting max value
@@ -117,14 +117,13 @@
 // alert( getMaxSubSum([1, 2, 3]) ); // 6
 // alert( getMaxSubSum([-1, -2, -3]) ); // 0
 
-
 //5.5 Array methods =>
-let arr = ["I", "study", "JavaScript"];
-let arr2 = ["I", "study", "JavaScript"];
-arr.splice(0, 2, "complex", "language");  //🤔
- alert(arr)
-arr2.splice(2, 0, "complex", "language");  //🤔
-alert(arr2)
+// let arr = ["I", "study", "JavaScript"];
+// let arr2 = ["I", "study", "JavaScript"];
+// arr.splice(0, 2, "complex", "language");  //🤔
+//  alert(arr)
+// arr2.splice(2, 0, "complex", "language");  //🤔
+// alert(arr2)
 
 // arr.forEach
 // let arr = ['a','b',1,2]
@@ -132,17 +131,58 @@ alert(arr2)
 //     alert(`${item } is at ${index}`)
 // })
 
+//Array Methods Tasks (course tasks)
+//task 1 => Translate border-left-width to borderLeftWidth
 // function camelize(str) {
-//     let str = "camel-case-new-old";
 //     let arr = str.split("-");
-//     let newArr = [];
-//     for (i = 1; i < arr.length; i++) {
-//       newArr.push(arr[i][0].toUpperCase() + arr[i].slice(1));
+//     for (i = 1; i < arr.length; i++){
+//         arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
 //     }
-//     newArr.unshift(arr[0]);
-//     let newStr = newArr.join("");
-//     return newStr
+//     let camelCaseStr = arr.join("")
+//     return camelCaseStr;
 // }
 
-// let str = prompt("enter string");
-// alert(camelize(str));
+// let str = prompt("Enter string to convert to camelCase...");
+// alert(camelize(str))
+
+//task 2 => Filter range
+// let arr = [5, 3, 8, 1];
+// let finalValue = 0;
+// let filtered = filterRange(arr, 1, 4);
+// function filterRange(arr, a, b) {
+//     return arr.filter((val) => val >= a && val <= b)
+// }
+// alert(filtered)
+// alert(arr)
+
+// task 3 => Filter range "in place"
+// let arr = [1, 2, 3, 4, 5, 6];
+// let newArr = [];
+// filterRangeInPlace(arr, 1, 4);
+// function filterRangeInPlace(arr, a, b) {
+//     newArr = arr.filter((val) => val >= a && val <= b);
+// }
+// arr = newArr;
+// alert(arr)
+
+// function filterRangeInPlace(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let val = arr[i];
+//       if (val < a || val > b) {
+//         arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+// }
+// let arr = [1,2,3,4,5,6,7,8];
+// filterRangeInPlace(arr, 1, 4);
+// alert( arr );
+
+// task 4 => Sort in decreasing order
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort((a, b) => b > a ? 1 : -1)
+// alert(arr)
+
+
+
+
