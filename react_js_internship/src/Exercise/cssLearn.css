@@ -1,0 +1,33 @@
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    border: 10px solid blue;
+}
+.simpleClass {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+}
+#simpleId {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+}
+.inputNamedClass {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}
+.parentDiv input{
+height: 100px;
+  width:400px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+.parentDiv2 .input2{
+height: 100px;
+  width: 100px;
+  background-color: orange;
+}
