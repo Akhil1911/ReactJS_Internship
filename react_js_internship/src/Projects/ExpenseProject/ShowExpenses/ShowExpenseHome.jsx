@@ -21,7 +21,7 @@ const ShowExpenseHome = ({ filteredExpense }) => {
           <Container sx={{ mt: 4, mb: 4 }} style={{ textAlign: "center" }}>
 
 
-            {filteredExpense.length >= 1 ? (
+            {filteredExpense?.length >= 1 ? (
               filteredExpense.map((data, index) => (
                 <div key={index} style={{ listStyle: "none" }}>
                   <ShowExpenseData

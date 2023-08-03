@@ -4,25 +4,8 @@ import ShowExpenseHome from "./ShowExpenses/ShowExpenseHome";
 import { Container } from "@mui/material";
 import FilterHome from "./Filter/FilterHome";
 const Index = () => {
-  let DUMMY_DATA = [
-    {
-      title: "medicines",
-      amount: 432,
-      date: new Date(),
-    },
-    {
-      title: "snacks",
-      amount: 200,
-      date: new Date(2022,1,1),
-    },
-    {
-      title: "clothes",
-      amount: 5000,
-      date: new Date(2020,3,8),
-    },
-  ];
   const [filteredExpense, setFilteredExpense] = useState([]);
-  const [expense, setExpense] = useState(DUMMY_DATA);
+  const [expense, setExpense] = useState([]);
   const [filteredYear, setFilteredYear] = useState("");
   const [singleExpense, setsingleExpense] = useState();
     const [allYears, setAllYears] = useState();

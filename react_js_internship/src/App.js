@@ -7,10 +7,11 @@ import React from "react";
 // import ExerciseUpdatindStateCounter from "./Exercise/ExerciseUpdatindStateCounter";
 // import ExerciseRenderingList from "./Exercise/ExerciseRenderingList";
 // import ExerciseOutputtingConditional from "./Exercise/ExerciseOutputtingConditional";
-// import Index from "./Projects/ExpenseProject";
+import Index from "./Projects/ExpenseProject";
 // import ExerciseDynamicStyles from "./Exercise/ExerciseDynamicStyles";
 import ExerciseDynamicCSSClasses from "./Exercise/ExerciseDynamicCSSClasses";
-import CssLearn from "./Exercise/cssLearn";
+// import CssLearn from "./Exercise/cssLearn";
+
 function App() {
   // let product = [
   //   {
@@ -42,10 +43,10 @@ function App() {
       {/* <ExerciseUpdatindStateCounter/> */}
       {/* <ExerciseRenderingList/> */}
       {/* <ExerciseOutputtingConditional/> */}
-      {/* <Index/> */}
+      <Index/>
       {/* <ExerciseDynamicStyles/> */}
       {/* <ExerciseDynamicCSSClasses/> */}
-      <CssLearn />
+      {/* <CssLearn /> */}
     </>
   );
 }

@@ -20,7 +20,7 @@ const FilterHome = ({
 }) => {
   const [year, setYear] = useState("All Year");
   // const [allYears, setAllYears] = useState();
-  console.log(allYears);
+  // console.log(allYears);
   const handleFilter = (fYear) => {
     setYear(fYear);
   };
@@ -28,10 +28,10 @@ const FilterHome = ({
   let filteredArray = [];
 
   useEffect(() => {
-    filteredArray = expenses.filter((value) => {
+    filteredArray = expenses?.filter((value) => {
       return new Date(value.date).getFullYear().toString() === year;
     });
-    console.log(expenses);
+    // console.log(expenses);
 
     //  setAllYears(
     //    expenses.map((value) => {
