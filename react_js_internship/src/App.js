@@ -9,7 +9,7 @@ import React from "react";
 // import ExerciseOutputtingConditional from "./Exercise/ExerciseOutputtingConditional";
 import Index from "./Projects/ExpenseProject";
 // import ExerciseDynamicStyles from "./Exercise/ExerciseDynamicStyles";
-import ExerciseDynamicCSSClasses from "./Exercise/ExerciseDynamicCSSClasses";
+// import ExerciseDynamicCSSClasses from "./Exercise/ExerciseDynamicCSSClasses";
 // import CssLearn from "./Exercise/cssLearn";
 
 function App() {

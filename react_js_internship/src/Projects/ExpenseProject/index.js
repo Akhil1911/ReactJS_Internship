@@ -8,11 +8,10 @@ const Index = () => {
   const [expense, setExpense] = useState([]);
   const [filteredYear, setFilteredYear] = useState("");
   const [singleExpense, setsingleExpense] = useState();
-    const [allYears, setAllYears] = useState();
-
+  const [allYears, setAllYears] = useState();
 
   const getExpenseData = (expenses) => {
-    setsingleExpense(expenses)
+    setsingleExpense(expenses);
     if (filteredYear === new Date(expenses.date).getFullYear().toString()) {
       setFilteredExpense((prevState) => [expenses, ...prevState]);
       setExpense((prevState) => [expenses, ...prevState]);
@@ -31,8 +30,7 @@ const Index = () => {
         return new Date(value.date).getFullYear().toString();
       })
     );
-    console.log(allYears);
-  },[singleExpense])
+  }, [singleExpense]);
 
   return (
     <Container>
@@ -40,12 +38,13 @@ const Index = () => {
       <FilterHome
         allYears={new Set(allYears)}
         expenses={expense}
-        singleExpense={singleExpense}
         getFilteredExpenseData={getFilteredExpenseData}
       />
       <ShowExpenseHome
         allYears={new Set(allYears)}
-        filteredExpense={filteredYear == "All Year" ? expense : filteredExpense}
+        filteredExpense={
+          filteredYear === "All Year" ? expense : filteredExpense
+        }
       />
     </Container>
   );

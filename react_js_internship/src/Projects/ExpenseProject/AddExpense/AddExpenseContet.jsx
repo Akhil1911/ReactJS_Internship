@@ -14,15 +14,6 @@ const AddExpenseContet = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setExpense((prevState) => [
-    //   {
-    //     title: expenseTitle,
-    //     amount: expenseAmount,
-    //     date: new Date(expenseDate),
-    //   },
-    //   ...prevState,
-    // ]);
-
     let expense = {
       title: expenseTitle,
       amount: expenseAmount,
@@ -30,9 +21,6 @@ const AddExpenseContet = ({
     };
 
       getExpenseData(expense);
-    //   console.log(expenseTitle);
-    //   console.log(new Date(expenseDate));
-    //   console.log(expenseAmount);
     setExpenseAmount(0);
     setExpenseTitle("");
     setExpenseDate("");

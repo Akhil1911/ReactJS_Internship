@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Paper,
   Container,
-  Button,
   Stack,
-  Divider,
   Typography,
 } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -15,7 +13,6 @@ import Select from "@mui/material/Select";
 const FilterHome = ({
   expenses,
   getFilteredExpenseData,
-  singleExpense,
   allYears,
 }) => {
   const [year, setYear] = useState("All Year");
@@ -25,23 +22,12 @@ const FilterHome = ({
     setYear(fYear);
   };
 
-  let filteredArray = [];
-
   useEffect(() => {
-    filteredArray = expenses?.filter((value) => {
+    let filteredArray = expenses?.filter((value) => {
       return new Date(value.date).getFullYear().toString() === year;
     });
-    // console.log(expenses);
-
-    //  setAllYears(
-    //    expenses.map((value) => {
-    //      return new Date(value.date).getFullYear();
-    //    })
-    //  );
-    //  console.log(allYears);
-
     getFilteredExpenseData(filteredArray, year);
-  }, [year, singleExpense]);
+  }, [year]);
 
   useEffect(() => {}, []);
 

@@ -25,7 +25,6 @@ const AddExpenseHome = (props) => {
             {showAddExpenseContent ? (
               <AddExpenseContet
                 getExpenseData={getExpenseData}
-                showAddExpenseContent={showAddExpenseContent}
                 setShowAddExpenseContent={setShowAddExpenseContent}
               />
             ) : (
