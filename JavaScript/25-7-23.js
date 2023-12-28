@@ -59,32 +59,32 @@
 //task 2 => Exclude backreferences
 
 // recursion
-// let company = {
-//   sales: [
-//     { name: "John", salary: 1000 },
-//     { name: "Alice", salary: 1600 },
-//   ],
-//   development: {
-//     sites: [
-//       { name: "Peter", salary: 2000 },
-//       { name: "Alex", salary: 1800 },
-//     ],
-//     internals: [{ name: "Jack", salary: 1300 }],
-//   },
-// };
+let company = {
+  sales: [
+    { name: "John", salary: 1000 },
+    { name: "Alice", salary: 1600 },
+  ],
+  development: {
+    sites: [
+      { name: "Peter", salary: 2000 },
+      { name: "Alex", salary: 1800 },
+    ],
+    internals: [{ name: "Jack", salary: 1300 }],
+  },
+};
 
-// function sumSalaries(company) {
-//   if (Array.isArray(company)) {
-//     return company.reduce((prev, acc) => prev + acc.salary, 0);
-//   } else {
-//     let sum = 0;
-//     for (let val of Object.values(company)) {
-//       sum += sumSalaries(val);
-//     }
-//     return sum;
-//   }
-// }
-// alert(sumSalaries(company));
+function sumSalaries(company) {
+  if (Array.isArray(company)) {
+    return company.reduce((prev, acc) => prev + acc.salary, 0);
+  } else {
+    let sum = 0;
+    for (let val of Object.values(company)) {
+      sum += sumSalaries(val);
+    }
+    return sum;
+  }
+}
+alert(sumSalaries(company));
 
 //tasks => Sum all numbers till the given one
 // let sum = 0;
@@ -113,59 +113,59 @@
 // }
 
 //task 2 => Factorial
-// let fact = 1;
-// let num = Number(prompt("Enter Number"))
-// alert(factorial(num))
-// function factorial(n) {
-//     if (n <= 0) {
-//         return 0
-//     }
-//     else if (n == 1) {
-//         return fact;
-//     } else {
-//         return n * factorial(n-1)
-//     }
-// }
+let fact = 1;
+let num2 = Number(prompt("Enter Number"))
+alert(factorial(num2))
+function factorial(n) {
+    if (n <= 0) {
+        return 0
+    }
+    else if (n == 1) {
+        return fact;
+    } else {
+        return n * factorial(n-1)
+    }
+}
 
 //task 3 => fibonacci
-// let num = Number(prompt("Enter Number"))
-// alert(fib(num))
-// function fib(n) {
-//     let x = 1;
-//     let y = 1;
-//         for (let i = 3; i <= n; i++){
-//             let fibo = x + y;
-//             x = y;
-//             y = fibo;
-//         }
-//         return y;
-//     }
+let num = Number(prompt("Enter Number"))
+alert(fib(num))
+function fib(n) {
+    let x = 1;
+    let y = 1;
+        for (let i = 3; i <= n; i++){
+            let fibo = x + y;
+            x = y;
+            y = fibo;
+        }
+        return y;
+    }
 
 //0 , 1 , 2 , 3 , 4 , 5 , 6 , 7
 //0 , 1 , 1 , 2 , 3 , 5 , 8 , 13
 
 //task 4=> Output a single-linked list
-// let list = {
-//   value: 1,
-//   next: {
-//     value: 2,
-//     next: {
-//       value: 3,
-//       next: {
-//         value: 4,
-//         next: null,
-//       },
-//     },
-//   },
-// };
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
 
-// function printList(list) {
-//     alert(list.value)
-//     if (list.next != null) {
-//         printList(list.next)
-//     }
-// }
-// printList(list)
+function printList(list) {
+    alert(list.value)
+    if (list.next != null) {
+        printList(list.next)
+    }
+}
+printList(list)
 
 //task 5=> Output a single-linked list in reverse order
 // let list = {

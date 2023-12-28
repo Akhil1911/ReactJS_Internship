@@ -130,24 +130,24 @@
 // printNumbers(10, 15);
 
 //6.9 => Decorators and forwarding, call/apply
-// let firstObj = {
-//     name: "Akhil",
-//     age: 20,
-//     // personalDetails: function () {
-//     //     console.log(this.name);
-//     // }
-// }
-// let secondObj = {
-//     name: "Kevish",
-//     age: 20,
-// }
+let firstObj = {
+    name: "Akhil",
+    age: 20,
+    // personalDetails: function () {
+    //     console.log(this.name);
+    // }
+}
+let secondObj = {
+    name: "Kevish",
+    age: 20,
+}
 
-//  function personalDetails (state,country) {
-//     let { name, age } = this;
-//     console.log(name + " , " + age + " , " + state + " , " + country);
-// }
+ function personalDetails (state,country) {
+    let { name, age } = this;
+    console.log(name + " , " + age + " , " + state + " , " + country);
+}
 
-// //call || function borrowoing
-// personalDetails.call(firstObj , "Gujarat" , "India")
-// personalDetails.call(secondObj , "Dar-Es-Saalam" , "South Africa")
-// firstObj.personalDetails.call(secondObj)
+//call || function borrowoing
+personalDetails.call(firstObj , "Gujarat" , "India")
+personalDetails.call(secondObj , ["Dar-Es-Saalam" , "South Africa"])
+firstObj.personalDetails.call(secondObj)

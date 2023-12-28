@@ -1,31 +1,21 @@
-import React,{useState} from "react";
-import "./ExerciseOutputtingConditional.css"
-// don't change the Component name "App"
-export default function ExerciseOutputtingConditional() {
-  const [mainDelete, setMainDelete] = useState(true);
+import React, { Fragment, useRef } from "react";
+
+function App() {
+  const focusPoint = useRef(null);
+  const onClickHandler = () => {
+    focusPoint.current.value = "The quick brown fox jumps over the lazy dog";
+    focusPoint.current.focus();
+  };
   return (
-    <div>
-      {mainDelete ? null : (
-        <div id="alert">
-          <h2>Are you sure?</h2>
-          <p>These changes can't be reverted!</p>
-                  <button
-                      id="alertBtn"
-            onClick={() => {
-              setMainDelete(true);
-            }}
-          >
-            Proceed
-          </button>
-        </div>
-      )}
-      <button
-        onClick={() => {
-          setMainDelete(false);
-        }}
-      >
-        Delete
-      </button>
-    </div>
+    <Fragment>
+      <div>
+        <button onClick={onClickHandler}>ACTION</button>
+      </div>
+      <label>Click on the action button to focus and populate the text.</label>
+      <br />
+      <textarea ref={focusPoint} />
+    </Fragment>
   );
 }
+
+export default App;

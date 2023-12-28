@@ -118,32 +118,32 @@
 // alert( getMaxSubSum([-1, -2, -3]) ); // 0
 
 //5.5 Array methods =>
-// let arr = ["I", "study", "JavaScript"];
-// let arr2 = ["I", "study", "JavaScript"];
-// arr.splice(0, 2, "complex", "language");  //🤔
-//  alert(arr)
-// arr2.splice(2, 0, "complex", "language");  //🤔
-// alert(arr2)
+let arr = ["I", "study", "JavaScript"];
+let arr2 = ["I", "study", "JavaScript"];
+arr.splice(0, 2, "complex", "language");  //🤔
+ alert(arr)
+arr2.splice(2, 0, "complex", "language");  //🤔
+alert(arr2)
 
 // arr.forEach
-// let arr = ['a','b',1,2]
-// arr.forEach((item, index) => {
-//     alert(`${item } is at ${index}`)
-// })
+let arr3 = ['a','b',1,2]
+arr3.forEach((item, index) => {
+    alert(`${item } is at ${index}`)
+})
 
 //Array Methods Tasks (course tasks)
 //task 1 => Translate border-left-width to borderLeftWidth
-// function camelize(str) {
-//     let arr = str.split("-");
-//     for (i = 1; i < arr.length; i++){
-//         arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
-//     }
-//     let camelCaseStr = arr.join("")
-//     return camelCaseStr;
-// }
+function camelize(str) {
+    let arr4 = str.split("-");
+    for (i = 1; i < arr4.length; i++){
+        arr4[i] = arr4[i][0].toUpperCase() + arr4[i].slice(1);
+    }
+    let camelCaseStr = arr4.join("")
+    return camelCaseStr;
+}
 
-// let str = prompt("Enter string to convert to camelCase...");
-// alert(camelize(str))
+let str = prompt("Enter string to convert to camelCase...");
+alert(camelize(str))
 
 //task 2 => Filter range
 // let arr = [5, 3, 8, 1];

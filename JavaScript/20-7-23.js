@@ -194,21 +194,21 @@
 //   }
 // );
 
-//square objects
-// let user = {};
-// user["like birds"] = true;
-// alert(user["like birds"])
-// delete user["like birds"];
+//objects
+let user = {};
+user["like birds"] = true;
+alert(user["like birds"])
+delete user["like birds"];
 
-// let user = {
-//   name: "John",
-//   age: 30,
-//   isAdmin: true,
-// };
+let user2 = {
+  name: "John",
+  age: 30,
+  isAdmin: true,
+};
 
-// for (let key in user) {
-//     alert(key + " : " + user[key])
-// }
+for (let key in user2) {
+    alert(key + " : " + user2[key])
+}
 
 // ==> 4.1
 // tasks 1 -> Hello, object
@@ -331,11 +331,10 @@
 // 5.3 Strings
 // task 1 ==> Uppercase the first character ==> ucFirst("john") == "John";
 
-// function ucFirst(str) {
-    //     return  str.charAt(0).toUpperCase() + str.slice(1);
-    // }
-    // alert(ucFirst('akhil'))
-    
+function ucFirst(str) {
+        return  str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    alert(ucFirst('akhil'))
     
 // task 2 ==> Check for spam
 // checkSpam('buy ViAgRA now') == true
